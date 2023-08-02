@@ -1,0 +1,37 @@
+.login form {
+  background: #fff;
+  padding: 1em 3em 1.35em;
+  max-width: 400px;
+  margin: 38px auto 299px;
+  box-shadow: 0 0 1em #222;
+  border-radius: 2px;
+}
+
+p {
+  margin: 0 0 2em 0;
+  position: relative;
+}
+
+.login input[type="email"],
+.login input[type="text"],
+.login input[type="password"] {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 1.6em;
+  padding: 0.4em 0.5em;
+  border-radius: 2px;
+}
+
+.login input[type="email"]:focus,
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+  background: #fff;
+}
+
+.login input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  margin: 0;
+}
