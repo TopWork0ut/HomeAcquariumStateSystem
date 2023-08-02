@@ -1,0 +1,132 @@
+.register {
+  display: flex;
+  flex-direction: row;
+}
+
+.register_container {
+  width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register_container form {
+  background: #fff;
+  padding: 1em 3em 1.35em;
+  max-width: 400px;
+  margin: 38px auto 112px;
+  box-shadow: 0 0 1em #222;
+  border-radius: 2px;
+}
+
+h2 {
+  margin: 0 0 50px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: darken(#e5e5e5, 50%);
+  border-bottom: solid 1px #e5e5e5;
+}
+
+p {
+  margin: 0 0 3em 0;
+  position: relative;
+}
+
+.register_container input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  margin: 0;
+}
+
+.register_container input[type="email"],
+.register_container input[type="text"],
+.register_container input[type="password"] {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 1.6em;
+  padding: 0.4em 0.5em;
+  border-radius: 2px;
+}
+
+.register_container input[type="email"]:focus,
+.register_container input[type="text"]:focus,
+.register_container input[type="password"]:focus {
+  background: #fff;
+}
+
+input[type="submit"] {
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  line-height: 1.6em;
+  margin: 2em 0 0;
+  outline: none;
+  padding: 0.8em 0;
+  text-shadow: 0 1px #68b25b;
+}
+
+input[type="submit"]:hover {
+  background: rgba(148, 175, 101, 1);
+}
+
+/* label {
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  color: #999;
+  font-size: 16px;
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0);
+} */
+
+/* button {
+  width: 200px;
+  border-radius: 8px;
+  height: 30px;
+  cursor: pointer;
+  border: 0.5px;
+  text-align: center;
+  border-color: #444;
+  box-shadow: inset 0 0 0 1px #444;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+}
+
+button p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+button:hover p {
+  color: #fff;
+}
+
+button:hover {
+  background-color: #454747;
+  box-shadow: inset 0 0 0 1px #bec0c1;
+} */
+
+.submit_div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit_div div {
+  display: flex;
+  align-items: center;
+}
+
+.submit_text {
+  font-size: 18px;
+  text-decoration: none;
+}

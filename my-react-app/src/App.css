@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900");
+
+:root {
+  --text-color: rgb(223, 233, 244);
+  --shadow-color: hsla(210, 40%, 52%, 0.4);
+  --btn-color: hsl(210, 80%, 42%);
+  --btn-color2: hsl(355, 77%, 45%);
+  /* --bg-color: #ffffff; */
+  --bg-color: #f8f8f8;
+  --bg-color-bt: #312f2f;
+  --bg-color-btFeed: #6200ff;
+  --bg-color-data: #e17c00;
+}
+/* diagramBTN */
+/* * {
+  box-sizing: border-box;
+} */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* /* align-items: center; */
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  /* align-items: center;
+  justify-content: center; */
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.main button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 900px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.filteringButtons {
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.btnWithoutBubbles {
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.btnWithoutBubbles {
+  background-color: var(--bg-color-btFeed);
+}
+
+#buttonTurnON {
+  background-color: var(--btn-color);
+}
+
+#buttonTurnOFF {
+  background-color: var(--btn-color2);
+}
+
+.btnWithoutBubbles:focus {
+  outline-color: transparent;
+  box-shadow: var(--bg-color-btFeed) 2px 2px 22px;
+}
+
+#buttonTurnON:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+#buttonTurnOFF:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color2) 2px 2px 22px;
+}
+
+.right::after,
+.filteringButtons::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events: none;
+}
+
+.btnWithoutBubbles::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events: none;
+}
+
+.filteringButtons::after {
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+}
+
+.btnWithoutBubbles::after {
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+}
+
+.right,
+.left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+
+  background-color: var(--bg-color-bt);
+  color: transparent;
+  transition: transform 0.4s ease-out;
+  transform: translate(0, -90%) rotate(0deg);
+}
+
+.filteringButtons:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg);
+}
+
+.filteringButtons .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg);
+}
+
+.filteringButtons .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg);
+}
+
+.btnWithoutBubbles:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg);
+}
+
+.btnWithoutBubbles .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg);
+}
+
+.btnWithoutBubbles .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg);
+}
+
+/* bubbles */
+.filteringButtons::before {
+  content: "";
+  pointer-events: none;
+  opacity: 0.6;
+  background: radial-gradient(
+      circle at 20% 35%,
+      transparent 0,
+      transparent 2px,
+      var(--text-color) 3px,
+      var(--text-color) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 75% 44%,
+      transparent 0,
+      transparent 2px,
+      var(--text-color) 3px,
+      var(--text-color) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 46% 52%,
+      transparent 0,
+      transparent 4px,
+      var(--text-color) 5px,
+      var(--text-color) 6px,
+      transparent 6px
+    );
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+
+#dataContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  margin: 0 10px;
+}
+
+#dataDiagram {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#dataDiagramBTN {
+  padding: 10px 0px;
+  text-decoration: none;
+  background-color: var(--bg-color-data);
+}
+p {
+  all: initial;
+}
